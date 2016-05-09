@@ -1,0 +1,222 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
+<head>
+	
+<?php echo $this->getChildHtml('head') ?>
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body<?php echo $this->getBodyClass()?' class="ps-static '.$this->getBodyClass().'"':'' ?>>
+	
+<?php echo $this->getChildHtml('after_body_start') ?>
+
+<div class="wrapper ps-static <?php echo $this->getLang().'-lang-class';?>">
+	
+    <?php echo $this->getChildHtml('global_notices') ?>
+    
+    <div class="page tickets">
+	    
+		<?php echo $this->getChildHtml('newcustomblock') ?>
+		
+	    <div class="tickets-container">
+		    
+		    <div class="tickets-content">
+            	    
+			    <h1 class="tickets-title">Tickets bestellen</h1>
+                
+                <form name="registreren" method="post" action="">
+                
+                	<h1> Registreren </h1>
+                    
+                    <br>
+                    
+                	<p class="input-label">Naam: <b class="req">(*)</b><br>
+                	<input type="text" name="naam"/>
+                    </p>
+                    
+                    <p class="input-label">Email: <b class="req">(*)</b><br>
+                    <input type="text" name="email"/>
+                    </p>
+                    
+                    <p class="input-label">Wachtwoord: <b class="req">(*)</b><br>
+                    <input type="password" name="wachtwoord"/>
+                    </p>
+                    
+                    <p>
+                    <input type="hidden" name="form_token" value="<?php echo $form_token; ?>" />
+                    <input type="submit" name="submit" value="Registreren" />
+                    </p>
+                    
+               	</form>
+                             
+<?php
+
+$connection = mysql_connect("localhost", "root", "b!3R827!@");
+$db = mysql_select_db("tickets", $connection) or die('Database heeft Aids');
+
+$naam		= $_POST['naam'];
+$email		= $_POST['email'];
+$password	= $_POST['wachtwoord'];
+
+$checksql = mysql_query("SELECT * FROM gebruikers WHERE naam = '$naam'");
+
+if(!isset($_POST['submit'])) {
+	$message = 'Vul aub uw gegevens in';
+	
+}
+
+elseif(strlen($_POST['naam']) < 1) {
+	$message = 'U moet nog uw gebruikersnaam invoeren';	
+} 
+
+elseif(strlen($_POST['email']) < 1) {
+	$message = 'U moet nog een email invoeren';	
+}
+
+elseif(strlen($_POST['wachtwoord']) < 1) {
+	$message = 'U moet nog een wachtwoord invoeren';
+} 
+
+elseif(strlen( $_POST['naam']) > 20 || strlen($_POST['naam']) < 4) {
+	$message = 'Gebruikersnaam moet minimaal 4 en maximaal 20 karakters lang zijn';
+	
+} 
+
+elseif(strlen( $_POST['wachtwoord']) > 20 || strlen($_POST['wachtwoord']) < 4) {
+	$message = 'Wachtwoord moet minimaal 4 en maximaal 20 karakters lang zijn';
+} 
+
+elseif(mysql_num_rows($checksql) >= 1) {
+	$message = 'Naam al in gebruik!';	
+} 
+
+else {
+	
+$password = md5($_POST['wachtwoord']);
+$query = mysql_query("insert into gebruikers(naam, email, wachtwoord) values ('$naam', '$email', '$password')");
+echo "Gebruiker toegevoegd!";
+
+}
+
+echo $message;
+
+mysql_close($connection);
+
+?>
+
+<br>
+<br>
+
+<form name="login" method="post" action="">
+	
+    <h2>Inloggen</h2>
+
+	<p>Gebruikersnaam:<br>
+	<input type="text" name="uname"/>
+    </p>
+    
+    <p>Wachtwoord:<br>
+    <input type="password" name="pword" />
+    </p>
+    
+    <p>
+    <input type="submit" name="inloggen" value="Inloggen" />
+    </p>
+</form>
+
+
+<?php
+
+$host = 'localhost';
+$dbuser = 'root';
+$dbpass = 'b!3R827!@';
+$db = 'tickets';
+$tbl_name = 'gebruikers';
+
+$uname = $_POST['uname'];
+$pword = $_POST['pword'];
+
+if(strlen($_POST['uname']) < 1) {
+	$msg = 'Vul uw gebruikersnaam in';	
+} 
+
+elseif(strlen($_POST['pword']) < 1) {
+	$msg = 'Vul uw wachtwoord in';
+} 
+
+else {
+	
+$pword = md5($_POST['pword']);
+
+$con = mysql_connect($host, $dbuser, $dbpass);
+mysql_select_db($db, $con) or die ('Database heeft chronsiche HIV');
+	
+$result = mysql_query("SELECT * FROM gebruikers WHERE naam = '$uname' and wachtwoord = '$pword'");
+$count = mysql_num_rows($result);
+
+if($count == 1) {
+	$msg = 'U bent ingelogd';
+	
+	session_register('loggedin');
+	
+	header("location:loginsucces.php");
+} 
+
+else {
+
+	$msg = 'Gebruiker niet gevonden';	
+
+}
+
+}
+
+mysql_close($con);
+
+echo $msg;
+
+?>
+		
+        <?php echo $this->getChildHtml('global_cookie_notice') ?>
+        <?php echo $this->getChildHtml('before_body_end') ?>
+        
+    </div>
+    
+</div>
+
+<?php echo $this->getAbsoluteFooter() ?>
+    
+</body>
+</html>

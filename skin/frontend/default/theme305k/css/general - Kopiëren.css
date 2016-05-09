@@ -1,0 +1,318 @@
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+ opacity:0;  /* make things invisible upon start */
+ -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+ -moz-animation:fadeIn ease-in 1;
+ animation:fadeIn ease-in 1;
+ 
+ -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+ -moz-animation-fill-mode:forwards;
+ animation-fill-mode:forwards;
+ 
+ -webkit-animation-duration:1s;
+ -moz-animation-duration:1s;
+ animation-duration:1s;
+}
+
+.fade-in.two {
+-webkit-animation-delay: 2s;
+-moz-animation-delay: 2;
+animation-delay: 2s;
+}
+
+.fade-in.three {
+-webkit-animation-delay: 5s;
+-moz-animation-delay: 5;
+animation-delay: 5s;
+}
+
+.fade-in.four {
+-webkit-animation-delay: 6s;
+-moz-animation-delay: 6;
+animation-delay: 6s;
+}
+
+.fade-in.five {
+-webkit-animation-delay: 7s;
+-moz-animation-delay: 7;
+animation-delay: 7s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0s;
+-moz-animation-delay: 0;
+animation-delay: 0s;
+}
+
+ul.add-to-links {
+	display:none!important;
+}
+
+.bedrijf-button:hover {
+	background:#2D2D2D;
+}
+
+.bedrijf-button {
+	transition:all 0.2s ease;
+	width:800px;
+	height:80px;
+	margin:0 auto;
+	border-radius:6px;
+	background:#004B00;
+}
+
+.bedrijf-button h2 {
+	padding-top:15px;
+	text-align:center;
+	font-size:36px;
+	color:#fff;
+}
+
+.line {
+	width:100%;
+	height:1px;
+	background:#dbdbdb;
+	margin-bottom:30px;
+}
+
+.bedrijf-header-img {
+	width:100%;
+	height:670px;
+	background:url('http://149.210.223.56/imgs/bedrijf.jpg');
+}
+
+.nivo-controlNav {
+	display:none;
+}
+
+.slider-wrapper {
+	height:845px;
+}
+
+.bedrijf h1, h2, h3, h4, h5, h6 {
+	color:#fff;
+}
+
+.bedrijf-imgs {
+	height:280px;
+	position:relative;
+	text-align:center;
+}
+
+.imgs-caption {
+	color:#fff;
+	font-size:24px;
+	padding-top:88px;
+	transition:all 0.4s ease;
+	opacity:0;
+	width:300px;
+	height:200px;
+	background:rgba(0,0,0,0.6);
+	position:relative;
+}
+
+.box:hover .imgs-caption {
+	opacity:1;
+}
+
+.box {
+	vertical-align:top;
+	position:relative;
+	width:300px;
+	height:200px;
+	margin:30px;
+	display:inline-block;
+}
+
+.bedrijf-imgs img {
+	left:0;
+	position:absolute;
+	width:300px;
+}
+
+.caption-imgs {
+	position:relative;
+	text-align:center;
+}
+
+.caption-imgs img {
+	border-radius:5px;
+	margin:0 30px 0 30px;
+	display:inline-block;	
+}
+
+.caption h1 {
+	font-size:32px;
+	color:#fff;
+}
+
+.caption p {
+	line-height:1.5em;
+	font-size:18px;
+	color:#ccc;
+	margin-top:10px;
+}
+
+.caption {
+	position:relative;
+	top:100px;
+	margin:0 auto;
+	background:rgba(0,0,0,0.8);
+	width:800px;
+	height:auto;
+	padding:20px;
+}
+
+.bedrijf {
+	width:100%;
+	padding:20px;
+}
+
+.bedrijf-content p {
+	margin-top:10px;
+}
+
+.bedrijf-content {
+	width:1200px;
+	height:auto;
+	margin:0 auto;
+}
+
+#slider {
+	height:845px;
+}
+
+.bedrijf-container {
+	background:#212121;
+}
+
+.availability-only {
+	display:none;
+}
+
+.product-collateral {
+	display:none;
+}
+
+.no-rating {
+	display:none;
+}
+
+.form-search {
+	position:relative;
+	bottom:12px;
+	background:#fff;
+	padding-right:2px;
+	padding-left:2px;
+}
+
+.box-tags {
+	display:none;
+}
+
+.more-views {
+	display:none;
+}
+
+.cloud-zoom-gallery {
+	display:none!important;
+}
+
+.addthis_toolbox {
+	display:none;
+}
+
+.row-product {
+	display:none;
+}
+
+a.shop_now {
+	display:none!important;
+}
+
+.block-cart-header h3 {
+	color:#000!important;
+	font-size:24px;
+	font-weight:bold;
+}
+
+.bottom-container {
+	height:30px!important;
+}
+
+.kustom {
+	float:left;
+	width:550px;
+	height:auto;
+	position:absolute;
+	right:0px;
+	text-align:center;
+	margin:0 auto;
+}
+
+.zoek {
+	position:absolute;
+	left:0px;
+	vertical-align:top;
+	display:inline-block;
+}
+
+.header-container {
+	background:#121212!important;
+}
+
+.winkelwagen {
+	position:absolute;
+	right:0px;
+	vertical-align:top;
+	display:inline-block;
+}
+
+.header .logo  {
+	float:left;
+}
+
+#search_mini_form {
+	position:static!important;
+	bottom:0!important;
+}
+
+.form-search label {
+	display:none;
+}
+
+.form-search input {
+	border:none!important;
+  	font-family: 'Open Sans', sans-serif;
+	font-weight:bold;
+	font-size:14px;
+	height:40px;
+	width:300px;
+}
+
+.block-title {
+	background:#060!important;
+}
+
+.actions a {
+	color:#060!important;
+}
+
+.page-title {
+	background:#060!important;
+}
+
+.ban_wrap {
+	background:#060!important;
+}
+
+.shop_now {
+	background:#060!important;
+}
+
+.nav-container {
+	background:#004B00!important;
+}

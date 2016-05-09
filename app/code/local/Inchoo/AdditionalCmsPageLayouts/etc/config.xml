@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+ <global>
+  <page>
+   <layouts>
+	   
+    <custom_static_page_one>
+     <label>Bedrijf</label>
+     <template>page/bedrijf.phtml</template>
+    </custom_static_page_one>
+    
+    <custom_static_page_two>
+    <label>Bedrijftwee</label>
+    <template>page/bedrijftwee.phtml</template>
+    </custom_static_page_two>
+	
+    <custom_static_page_three>
+    <label>Tickets</label>
+    <template>page/tickets.phtml</template>
+    </custom_static_page_three>
+    
+     <custom_static_page_four>
+    <label>Bedrijfdrie</label>
+    <template>page/bedrijfdrie.phtml</template>
+    </custom_static_page_four>
+    
+   </layouts>
+  </page>
+ </global>
+</config>

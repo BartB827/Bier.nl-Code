@@ -1,0 +1,260 @@
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ @font-face {font-family:"Heineken";src:url("http://149.210.223.56/bier/fonts/HEINEKEN.eot?") format("eot"),url("http://149.210.223.56/fonts/HEINEKEN.woff") format("woff"),url("HEINEKEN.ttf") format("truetype"),url("http://149.210.223.56/bier/fonts/HEINEKEN.svg#Heineken") format("svg");font-weight:normal;font-style:normal;}
+
+.bedrijfdrie {
+	width:100%;
+	text-align:center!important;
+	background:#000;
+	float:left;
+}
+
+.bedrijfdrie-headerlogo {
+	padding:0 20px 0 20px!important;
+	display:table;
+	width:100%;
+	height:60px;
+	background:#000;
+	float:left;
+}
+
+.bedrijfdrie-tickets {
+	display:inline-block;
+	margin:40px 0px 0px 0px;
+	border-radius:10px;
+	color:#fff!important;
+	background:#000;
+	width:300px;
+	padding:20px;
+	height:auto;
+	font-size:28px!important;
+}
+
+.logo {
+	float:left;
+}
+
+.bedrijfdrie-back h3 {
+	text-align:left;
+	margin:0;
+	color:#fff;
+}
+
+.bedrijfdrie-back {
+	display:table-cell!important;
+	vertical-align:middle!important;
+}
+
+.bedrijfdrie-title {
+	margin:0px 0px 60px 0px;
+	width:982px;
+	display:inline-block;
+	text-align:left;
+}
+
+.bedrijfdrie h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', sans-serif;
+	color:#e9c54b;
+}
+
+.bedrijfdrie h1 {
+	font-size:42px;
+}
+
+.bedrijfdrie h2 {
+	font-size:28px;
+}
+
+.bedrijfdrie-box {
+	text-align:left;
+	margin:0 20px 0 20px!important;
+	width:297px;
+	min-height:200px;
+	display:inline-block;
+	vertical-align:top;
+}
+
+.bedrijfdrie-threeboxes {
+	width:1160px;
+	height:auto;
+	position:relative;
+	margin:0 auto;
+	display:inline-block;
+}
+
+.bedrijfdrie-boxcontent {
+	text-align:left;
+	float:left;
+}
+
+.bedrijfdrie-container {
+	width:100%;
+	height:auto;
+	margin:0 auto;
+	position:relative;
+	display:inline-block;
+}
+
+.bedrijfdrie-fluid {
+	position:relative;
+	width:1200px;
+	height:auto;
+	display:inline-block;
+	margin:0 auto;
+	z-index:2;
+}
+
+.sociaal {
+	position:absolute;
+	right:0;
+	bottom:10px;
+}
+
+.sociaal a {
+	margin:0px 20px 0px 20px;
+}
+
+.sociaal a:hover i {
+	color:#e9c54b;
+}
+
+.sociaal i {
+	font-weight:100;
+	transition:all ease 0.4s;
+	color:#fff;
+	font-size:36px;
+}
+
+.sociaal i:last-child {
+	margin-right:0!important;
+}
+
+.relative {
+	position:relative;
+	top:200px;
+}
+
+.bedrijfdrie-menu {
+	position:relative;
+	z-index:3;
+	width:auto;
+	height:50px;
+	float:right;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+}
+
+.bedrijfdrie-menu li {
+	transition:all ease 0.4s;
+	background:rgba(233,197,75,0);
+	margin:0px 10px 0px 10px;
+	width:auto;
+	height:50px;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+	float:left;
+}
+
+.bedrijfdrie-menu li a {
+	width:100%;
+	height:50px!important;
+	padding:12px 20px 0px 20px;
+	float:left;
+}
+
+.bedrijfdrie-menu li:hover {
+	background:rgba(233,197,75,1);	
+}
+
+.bedrijfdrie-menu li:hover a {
+	color:#000;	
+}
+
+.bedrijfdrie-menu li:last-child {
+	margin-right:0px!important;
+}
+
+.bedrijfdrie-menu li a {
+	font-size:18px;
+	font-weight:100;
+	color:#e9c54b;
+}
+
+.bedrijfdrie-header {
+	width:100%;
+	height:350px;
+	background:url('http://149.210.223.56/bier/imgs/hertogg.jpg');
+	background-size:100% auto;
+	margin:0 auto;
+	float:left;
+	position:relative;
+	z-index:1;
+	border-bottom:6px solid #e9c54b;
+}
+
+.bedrijfdrie-photo {
+	-webkit-box-shadow: 0px 0px 27px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 27px -5px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 27px -5px rgba(0,0,0,0.75);
+	width:200px;
+	height:200px;
+	margin:0 auto;
+	float:left;
+	background:#fff;
+	padding:2.5px 2.5px 2.5px 2.5px!important;
+	z-index:2;
+	border-radius:9px;
+}
+
+.bedrijfdrie-photo img {
+	border-radius:8px;
+	width:195px;
+	height:195px;
+	margin:0 auto;
+}
+
+.bedrijfdrie-content {
+	padding:40px 20px 20px 20px;
+	width:100%;
+	min-height:300px;
+	background:#000;
+	float:left;
+	margin:0 auto;
+}
+
+.bedrijfdrie-footer {
+	width:100%;
+	height:auto;
+	background:#e9c54b;
+	padding:20px;
+	float:left;
+}
+
+.readmore {
+	color:#fff;
+}
+
+.bedrijfdrie-footer .bedrijfdrie-box {
+	min-height:100px;
+}
+
+.bedrijfdrie-innerfooter {
+	font-size:12px;
+	text-align:center;
+	padding:0px 20px 0px 20px!important;
+	width:1160px;
+	min-height:50px;
+	display:inline-block;
+	margin:0 auto;
+}
+
+ h2.bedrijfdrie-boxtitle {
+	color:#cccccc!important; 
+ }
+ 
+.bedrijfdrie-footer .bedrijfdrie-boxcontent {
+	color:#000!important;
+}
+
+.bedrijfdrie-footer h2.bedrijfdrie-boxtitle {
+	font-size:24px!important;
+	color:#000!important;
+}

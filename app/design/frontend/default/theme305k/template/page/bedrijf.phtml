@@ -1,0 +1,141 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
+<head>
+<?php echo $this->getChildHtml('head') ?>
+
+</head>
+<body<?php echo $this->getBodyClass()?' class="ps-static '.$this->getBodyClass().'"':'' ?>>
+<?php echo $this->getChildHtml('after_body_start') ?>
+<div class="wrapper ps-static <?php echo $this->getLang().'-lang-class';?>">
+    <?php echo $this->getChildHtml('global_notices') ?>
+    <div class="page">
+        <?php echo $this->getChildHtml('header') ?>
+				<div class="bedrijf-container">
+        
+        			<div class="bedrijf-header-img fade-in one">
+                    
+                    <div class="caption fade-in two">
+                    
+                    <h1>Bedrijf: Examplers</h1>
+                    <p>
+           			Eos et feugait nominavi, ipsum phaedrum quo ut. No iisque persius assentior sea. Vitae noster qui at, vis elit legere malorum at, nonumy dissentias te ius. Velit oporteat recteque cu mei, ad nam sint singulis, vis ea latine postulant posidonium. Est nonumy facilisi senserit an, idque iudicabit concludaturque an his.
+
+Sed malorum detracto ad, quo copiosae repudiare ei. Per harum viris at. Vim offendit epicurei inciderint eu. Et omnium accusam liberavisse vel. Velit accumsan urbanitas id vim. Duo offendit luptatum voluptaria.
+
+					<br>
+                    <br>
+					
+                    <div class="caption-imgs">
+                    
+    					<img class="fade-in three" src="http://www.luckydshostel.com/wp-content/uploads/2014/11/beer_toast.jpg" width="150"/>
+                        
+                    	<img class="fade-in four" src="http://www.luckydshostel.com/wp-content/uploads/2014/11/beer_toast.jpg" width="150"/>
+                        
+						<img class="fade-in five" src="http://www.luckydshostel.com/wp-content/uploads/2014/11/beer_toast.jpg" width="150"/>
+                        
+                    </div>
+                    
+                    </p>
+                    
+                    </div>
+                    
+                    </div>
+        
+        				<div class="bedrijf">
+                        
+                        	<div class="bedrijf-content">
+                            
+                            <h1 style="font-size:43px">Bedrijf</h1>
+                            <p>
+                            Minim expetendis no eum, ullum copiosae usu cu, ea pri justo inermis definitionem. Et offendit vituperata nec, ad usu aeque invenire. Pro ea option oblique pertinacia. Mei quidam delectus appellantur ei. Mel harum fastidii id. His no wisi dicant.
+Mutat semper oporteat no sea, ad graece tractatos delicatissimi per. Postea alterum ornatus ne sed, et quo meis qualisque scribentur. Assum debet duo no. Ex eam modus conceptam. Usu reque harum vivendo no.
+Ut est alia invenire, nam vocent lucilius an, sed numquam habemus inciderint an. Et oratio probatus persecuti vis. Ubique suscipit ponderum qui ea, cu usu assum melius. Ex quo cibo praesent, solet nominati erroribus ne quo. Ubique interesset ut per, eum voluptua ullamcorper ad. Eum at inani possit consectetuer. No lorem velit disputando mei, dolor nominati theophrastus at usu.
+<br><br>
+Ad pro veniam audire numquam, an pro laoreet imperdiet. Epicurei tractatos euripidis mel eu, vel ullum mucius maluisset ut. Mea at purto exerci ocurreret, quas facilis no eos, cum no sumo malis ancillae. Nisl utamur meliore ea mea, integre vivendum et pri. Vitae intellegat ut
+                            </p>
+                            
+                            <div class="bedrijf-imgs">
+                            	
+                                <div class="box">
+                                
+                            		<img src="http://images.chesscomfiles.com/uploads/images_users/tiny_mce/brigatine-66/phpFNmZNU.jpeg" />
+                                    <div class="imgs-caption">Afbeelding #1</div>
+                                
+                                </div>
+                                
+                                <div class="box">
+                                
+                            		<img src="http://images.chesscomfiles.com/uploads/images_users/tiny_mce/brigatine-66/phpFNmZNU.jpeg" />
+                                    <div class="imgs-caption">Afbeelding #2</div>
+                                
+                                </div>
+                                
+                                <div class="box">
+                                
+                            		<img src="http://images.chesscomfiles.com/uploads/images_users/tiny_mce/brigatine-66/phpFNmZNU.jpeg" />
+                                    <div class="imgs-caption">Afbeelding #3</div>
+                                
+                                </div>
+                   
+                            </div>
+                            
+                          	<a href="#">
+                            <div class="bedrijf-button">
+                            
+                            	<a href="http://149.210.223.56/bier/index.php/tickets"><h2>Tickets bestellen</h2></a>
+                            
+                            </div>
+                            </a>
+							
+								<div class="col-main">
+                                
+									<div class="padding-s">
+										<?php echo $this->getChildHtml('global_messages') ?>
+                                        <?php echo $this->getChildHtml('content') ?>
+                                    </div>
+							</div>
+                            
+						</div>
+                        
+					</div>
+		
+        <?php echo $this->getChildHtml('footer') ?>
+        <?php echo $this->getChildHtml('global_cookie_notice') ?>
+        <?php echo $this->getChildHtml('before_body_end') ?>
+    </div>
+</div>
+<?php echo $this->getAbsoluteFooter() ?>
+    
+</body>
+</html>
